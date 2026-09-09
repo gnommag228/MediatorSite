@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MediatorSite</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MediatorSite.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="position-relative overflow-x-hidden bg-white">
+
+    <!-- Фоновая геометрия -->
+    <!-- Фоновая геометрия с умеренным размытием -->
+    <div class="position-fixed w-100 h-100 top-0 start-0 pointer-events-none" style="z-index: -1;">
+        <div class="position-absolute bg-primary rounded-5 opacity-10"
+             style="width: 280px; height: 280px; right: -60px; top: -30px; transform: rotate(15deg); filter: blur(8px);"></div>
+        <div class="position-absolute bg-primary rounded-5 opacity-10"
+             style="width: 220px; height: 220px; left: -80px; top: 35%; transform: rotate(-20deg); filter: blur(6px);"></div>
+        <div class="position-absolute bg-primary rounded-4 opacity-10"
+             style="width: 180px; height: 180px; right: -40px; bottom: 10%; transform: rotate(35deg); filter: blur(5px);"></div>
+    </div>
+    <header class="sticky-top py-3" style="z-index: 1030;">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white bg-opacity-75 backdrop-blur rounded-pill shadow-sm px-4">
+                <a class="navbar-brand fw-bold text-primary" href="/">
+                    <i class="bi bi-flower1 me-2"></i>Юлия | Медиация
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center gap-2">
+                        <li class="nav-item"><a class="nav-link fw-medium" href="#about">О мне</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="#services">Услуги</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="#contacts">Контакты</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="#faq">FAQ</a></li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-primary rounded-pill px-4 shadow-sm" href="#booking-form">Записаться</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <style>
+        .backdrop-blur {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2026 - MediatorSite - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

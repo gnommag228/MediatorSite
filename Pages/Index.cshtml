@@ -1,0 +1,419 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Центр медиации и психологической помощи";
+}
+<!-- Главный баннер (Hero) -->
+<section class="py-5 mb-5 rounded-5 bg-white border border-1 shadow-sm text-center" style="min-height: 380px; display: flex; align-items: center;">
+    <div class="container py-3">
+        <div class="mx-auto" style="max-width: 750px;">
+            <span class="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2 rounded-pill fw-medium">
+                <i class="bi bi-shield-check me-1"></i> Конфиденциально & Профессионально
+            </span>
+
+            <h1 class="display-4 fw-bold mb-3 text-dark" style="letter-spacing: -0.5px;">Гармония и Понимание</h1>
+
+            <p class="fs-5 text-muted mb-4 fw-normal" style="line-height: 1.6;">
+                Профессиональная медиация и психологическая поддержка. Поможем найти выход из сложных жизненных и конфликтных ситуаций.
+            </p>
+
+            <a href="#booking-form" class="btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-sm fw-medium">
+                Записаться на сессию <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Блок "О специалисте" -->
+<section id="about" class="mb-5">
+    <div class="row align-items-center g-4">
+        <div class="col-md-5">
+            <img src="/images/specialist.jpg" alt="Медиатор Юлия" class="img-fluid rounded-4 shadow object-fit-cover" style="max-height: 650px; width: 100%;">
+
+        </div>
+        <div class="col-md-7">
+            <h2 class="fw-bold mb-3">Ваш медиатор — Юлия</h2>
+            <p class="text-muted fs-5">Дипломированный специалист по разрешению конфликтов и семейной психологии с практикой более 7 лет.</p>
+            <ul class="list-unstyled mb-4">
+                <li class="mb-2">✔️ Конфиденциальность и безопасная атмосфера</li>
+                <li class="mb-2">✔️ Помощь в решении семейных и бизнес-споров</li>
+                <li class="mb-2">✔️ Индивидуальный подход к каждой истории</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Карточки услуг (без картинок, с иконками) -->
+<section id="services" class="mb-5">
+    <h2 class="text-center fw-bold mb-4">Форматы работы</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
+                <div class="mb-3 text-primary fs-1">
+                    <i class="bi bi-person-heart"></i>
+                </div>
+                <div class="card-body p-0">
+                    <h5 class="card-title fw-bold mb-2">Индивидуальная сессия</h5>
+                    <p class="card-text text-muted small mb-3">Проработка личных запросов, эмоционального выгорания и внутренних противоречий.</p>
+                    <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">60 минут</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
+                <div class="mb-3 text-primary fs-1">
+                    <i class="bi bi-people"></i>
+                </div>
+                <div class="card-body p-0">
+                    <h5 class="card-title fw-bold mb-2">Семейная медиация</h5>
+                    <p class="card-text text-muted small mb-3">Помощь парам в цивилизованном разрешении споров и восстановлении контакта.</p>
+                    <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">90 минут</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
+                <div class="mb-3 text-primary fs-1">
+                    <i class="bi bi-laptop"></i>
+                </div>
+                <div class="card-body p-0">
+                    <h5 class="card-title fw-bold mb-2">Онлайн-консультация</h5>
+                    <p class="card-text text-muted small mb-3">Удобный формат встречи из любой точки мира через Zoom или Telegram.</p>
+                    <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">60 минут</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Форма бронирования -->
+<section id="booking-form" class="py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card border-0 shadow-lg rounded-4 p-4">
+                <h3 class="fw-bold text-center mb-4">Онлайн-запись</h3>
+
+
+
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Ваше имя</label>
+                        <input asp-for="Booking.CustomerName" class="form-control form-control-lg" placeholder="Иван Иванов" required />
+                        <span asp-validation-for="Booking.CustomerName" class="text-danger small"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Booking.Phone" class="form-label fw-medium">Номер телефона</label>
+                        <input asp-for="Booking.Phone"
+                               id="phone-input"
+                               type="tel"
+                               class="form-control form-control-lg rounded-3"
+                               placeholder="+7 (999) 000-00-00"
+                               autocomplete="off"
+                               required />
+                        <span asp-validation-for="Booking.Phone" class="text-danger small"></span>
+                    </div>
+
+                    <div class="row g-2 mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Дата встречи</label>
+                            <input type="date" name="SelectedDate" class="form-control form-control-lg" required min="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-bold">Время встречи</label>
+
+                            <!-- Скрытое поле для отправки значения на бэкенд -->
+                            <input type="hidden" name="SelectedTime" id="selected-time-input" required />
+
+                            <!-- Контейнер для кликабельных кнопок -->
+                            <div id="time-slots-container" class="d-flex flex-wrap gap-2"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-bold">Тема обращения / Комментарий</label>
+                        <textarea asp-for="Booking.SpecialRequests" class="form-control" rows="3" placeholder="Кратко опишите суть вашего вопроса..."></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="btn btn-primary btn-lg w-100 rounded-3 fw-bold">
+                        Записаться на консультацию
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Вопросы и ответы (FAQ) -->
+<section id="faq" class="mt-5 mb-4">
+    <h2 class="text-center fw-bold mb-4">Часто задаваемые вопросы</h2>
+    <div class="accordion shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
+
+        <!-- Вопрос 1 -->
+        <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    Как проходит первая встреча?
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                    На первой сессии мы формулируем ваш запрос, обсуждаем ожидаемые результаты и составляем комфортный план дальнейшей работы.
+                </div>
+            </div>
+        </div>
+
+        <!-- Вопрос 2 -->
+        <div class="accordion-item border-0 border-top">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    Эффективна ли онлайн-консультация так же, как личная встреча?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                    Да, результат сессии не зависит от формата. Главное — находиться в спокойном и безопасном месте, где вас никто не будет отвлекать во время созвона.
+                </div>
+            </div>
+        </div>
+
+        <!-- Вопрос 3 -->
+        <div class="accordion-item border-0 border-top">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    Нужно ли как-то специально готовиться к сессии?
+                </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                    Специальная подготовка не требуется. Достаточно сформулировать ключевые темы или вопросы, которые вы хотите обсудить в первую очередь.
+                </div>
+            </div>
+        </div>
+
+        <!-- Вопрос 4 -->
+        <div class="accordion-item border-0 border-top">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                    Что делать, если нужно отменить или перенести запись?
+                </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                    Вы можете перенести или отменить консультацию, предупредив меня в Telegram или WhatsApp не позднее чем за 24 часа до назначенного времени.
+                </div>
+            </div>
+        </div>
+
+        <!-- Вопрос 5 -->
+        <div class="accordion-item border-0 border-top">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                    Гарантируется ли конфиденциальность?
+                </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                    Абсолютно. Вся информация, озвученная на консультациях или медиациях, строго конфиденциальна и не передается третьим лицам.
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Блок Контактов -->
+<section id="contacts" class="mb-5">
+    <div class="card border border-primary border-opacity-10 shadow-sm rounded-5 p-4 p-md-5 bg-white">
+        <h2 class="fw-bold text-center text-dark mb-4">Контакты</h2>
+        <div class="row g-4 align-items-center">
+
+            <!-- Информационный блок -->
+            <div class="col-md-6">
+                <div class="d-flex align-items-start mb-4">
+                    <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px; min-width: 48px;">
+                        <i class="bi bi-geo-alt fs-5"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-dark">Адрес приема (офлайн)</h6>
+                        <p class="text-muted mb-0">г. Москва, ул. Примерная, д. 10, офис 402</p>
+                        <small class="text-muted">(прием строго по предварительной записи)</small>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start mb-4">
+                    <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px; min-width: 48px;">
+                        <i class="bi bi-telephone fs-5"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-dark">Телефон</h6>
+                        <p class="mb-0">
+                            <a href="tel:+79028156175" class="text-decoration-none text-dark fw-semibold">+7 (902) 815-61-75</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start">
+                    <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px; min-width: 48px;">
+                        <i class="bi bi-clock fs-5"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1 text-dark">Режим работы</h6>
+                        <p class="text-muted mb-0">Пн — Сб: 09:00 – 19:00</p>
+                        <p class="text-muted mb-0">Вс: Выходной</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Быстрые ссылки в мессенджеры -->
+            <div class="col-md-6">
+                <div class="p-4 rounded-4 text-center border border-primary border-opacity-10" style="background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);">
+                    <h5 class="fw-bold text-dark mb-3">Быстрая связь в мессенджерах</h5>
+                    <p class="text-muted small mb-4">Предпочитаете текстовые сообщения? Напишите мне прямо в чат — отвечу в течение 15 минут.</p>
+
+                    <div class="d-grid gap-2">
+                        <a href="https://t.me/Yuliya_Nikiforova" target="_blank" class="btn btn-primary btn-lg rounded-pill fw-medium shadow-sm">
+                            <i class="bi bi-telegram me-2"></i> Написать в Telegram
+                        </a>
+                        <a href="https://wa.me/79028156175" target="_blank" class="btn btn-success btn-lg rounded-pill fw-medium shadow-sm">
+                            <i class="bi bi-whatsapp me-2"></i> Написать в WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // 1. Занятые слоты из сервера
+        const takenSlots = JSON.parse('@Html.Raw(ViewData["TakenSlots"] ?? "[]")');
+        const timeSlots = ["09:00", "10:30", "12:00", "14:00", "15:30", "17:00", "18:30"];
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // 2. SweetAlert2 Toast
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <text>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Успешно!',
+                    text: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(TempData["SuccessMessage"])),
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 4000,
+                    timerProgressBar: true
+                });
+                </text>
+            }
+
+            // 3. Генерация UI-плиток времени
+            function renderTimeSlots() {
+                const container = document.getElementById('time-slots-container');
+                const dateInput = document.querySelector('input[name="SelectedDate"]');
+                const hiddenTimeInput = document.getElementById('selected-time-input');
+
+                if (!container || !dateInput) return;
+
+                container.innerHTML = '';
+                const selectedDate = dateInput.value;
+
+                timeSlots.forEach(slot => {
+                    const fullSlot = `${selectedDate} ${slot}`;
+                    const isTaken = takenSlots.includes(fullSlot);
+
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = isTaken
+                        ? 'btn btn-outline-secondary disabled position-relative px-3 py-2 text-decoration-line-through opacity-50'
+                        : 'btn btn-outline-primary px-3 py-2 fw-medium time-slot-btn';
+
+                    btn.innerHTML = isTaken ? `${slot} ` : slot;
+                    btn.disabled = isTaken;
+
+                    if (!isTaken) {
+                        if (hiddenTimeInput.value === slot) {
+                            btn.classList.replace('btn-outline-primary', 'btn-primary');
+                        }
+
+                        btn.addEventListener('click', function () {
+                            document.querySelectorAll('.time-slot-btn').forEach(b => {
+                                b.classList.replace('btn-primary', 'btn-outline-primary');
+                            });
+                            btn.classList.replace('btn-outline-primary', 'btn-primary');
+                            hiddenTimeInput.value = slot;
+                        });
+                    }
+
+                    container.appendChild(btn);
+                });
+            }
+
+            // Перерисовка при смене даты
+            const dateInput = document.querySelector('input[name="SelectedDate"]');
+            if (dateInput) {
+                dateInput.addEventListener('change', () => {
+                    const hiddenTimeInput = document.getElementById('selected-time-input');
+                    if (hiddenTimeInput) hiddenTimeInput.value = '';
+                    renderTimeSlots();
+                });
+            }
+
+            // Первичный рендер
+            renderTimeSlots();
+
+            // 4. Спиннер на кнопке
+            const bookingForm = document.querySelector('form');
+            const submitBtn = document.getElementById('submit-btn');
+
+            if (bookingForm && submitBtn) {
+                bookingForm.addEventListener('submit', function () {
+                    if ($(bookingForm).valid && !$(bookingForm).valid()) return;
+
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = `
+                        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        Отправка заявки...
+                    `;
+                });
+            }
+
+            // 5. Маска телефона
+            const phoneInput = document.getElementById('phone-input');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function (e) {
+                    let val = e.target.value;
+                    if (!val) return;
+
+                    if (val.startsWith('+') && !val.startsWith('+7')) {
+                        e.target.value = val.replace(/[^\d\+\s\-]/g, '');
+                        return;
+                    }
+
+                    if (val.startsWith('8') || val.startsWith('7') || val.startsWith('+7')) {
+                        let digits = val.replace(/\D/g, '');
+                        if (digits.startsWith('8')) digits = '7' + digits.slice(1);
+
+                        let formatted = '+7';
+                        if (digits.length > 1) formatted += ' (' + digits.substring(1, 4);
+                        if (digits.length >= 4) formatted += ') ' + digits.substring(4, 7);
+                        if (digits.length >= 7) formatted += '-' + digits.substring(7, 9);
+                        if (digits.length >= 9) formatted += '-' + digits.substring(9, 11);
+
+                        e.target.value = formatted;
+                    } else {
+                        e.target.value = val.replace(/[^\d\+\s\-]/g, '');
+                    }
+                });
+            }
+        });
+    </script>
+}
