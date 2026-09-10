@@ -7,7 +7,7 @@
 <div class="container mt-4">
     @if (!Model.IsAuthenticated)
     {
-        <!-- Форма входа -->
+    
     <div class="row justify-content-center">
         <div class="col-md-4 card p-4 shadow-sm mt-5">
             <h3 class="text-center mb-3">Вход для админа</h3>
@@ -25,7 +25,7 @@
     }
     else
     {
- <!-- Защищенная таблица -->
+
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Заявки на консультацию</h2>
         <form method="post" asp-page-handler="Logout">
@@ -66,7 +66,7 @@
                     </form>
                 </td>
                 <td>
-                    <!-- Кнопка удаления -->
+                   
                     <form method="post" asp-page-handler="Delete" onsubmit="return confirm('Удалить эту заявку?');">
                         <input type="hidden" name="id" value="@item.BookingId" />
                         <button type="submit" class="btn btn-danger btn-sm">Удалить</button>
