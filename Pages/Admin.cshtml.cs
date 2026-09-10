@@ -25,7 +25,7 @@ public class AdminModel : PageModel
 
         if (IsAuthenticated)
         {
-            // Сортируем заявки: сначала самые свежие
+           
             Bookings = await _context.Bookings.OrderByDescending(b => b.BookingId).ToListAsync();
         }
 
@@ -34,7 +34,7 @@ public class AdminModel : PageModel
 
     public IActionResult OnPost(string password)
     {
-        // Читаем пароль из файла appsettings.json
+        
         string? adminPassword = _configuration["AdminSettings:Password"];
 
         if (!string.IsNullOrEmpty(adminPassword) && password == adminPassword)
@@ -43,7 +43,7 @@ public class AdminModel : PageModel
             return RedirectToPage();
         }
 
-        ModelState.AddModelError(string.Empty, "Неверный пароль!");
+        ModelState.AddModelError(string.Empty, "ГЌГҐГўГҐГ°Г­Г»Г© ГЇГ Г°Г®Г«Гј!");
         return Page();
     }
 
@@ -53,7 +53,6 @@ public class AdminModel : PageModel
         return RedirectToPage();
     }
 
-    // Удаление заявки
     public async Task<IActionResult> OnPostDeleteAsync(int id)
     {
         if (HttpContext.Session.GetString("IsAdmin") != "true") return RedirectToPage();
@@ -68,7 +67,6 @@ public class AdminModel : PageModel
         return RedirectToPage();
     }
 
-    // Изменение статуса
     public async Task<IActionResult> OnPostUpdateStatusAsync(int id, string status)
     {
         if (HttpContext.Session.GetString("IsAdmin") != "true") return RedirectToPage();
