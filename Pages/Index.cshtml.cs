@@ -53,7 +53,7 @@ public class IndexModel : PageModel
 
         ModelState.Remove("Booking.BookingDate");
 
-        // Проверка занятости слота
+        
         bool isSlotTaken = await _context.Bookings
             .AnyAsync(b => b.BookingDate == Booking.BookingDate);
 
@@ -75,7 +75,7 @@ public class IndexModel : PageModel
 
         _logger.LogInformation("Новая заявка #{BookingId} успешно сохранена в БД.", Booking.BookingId);
 
-        // Отправка в Telegram
+       
         await SendTelegramNotificationAsync(Booking);
 
         TempData["SuccessMessage"] = "Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.";
@@ -88,14 +88,14 @@ public class IndexModel : PageModel
         string botToken = _configuration["TelegramSettings:BotToken"]!;
         string chatId = _configuration["TelegramSettings:ChatId"]!;
 
-        // 1. Очищаем номер до цифр для формирования URL
+       
         string cleanPhone = new string((booking.Phone ?? "").Where(char.IsDigit).ToArray());
         if (cleanPhone.Length == 11 && cleanPhone.StartsWith("8"))
         {
             cleanPhone = "7" + cleanPhone.Substring(1);
         }
 
-        // 2. Формируем безопасный текст с экранированием Markdown
+       
         string name = SanitizeMarkdown(booking.CustomerName);
         string phone = SanitizeMarkdown(booking.Phone);
         string comments = SanitizeMarkdown(booking.SpecialRequests ?? "Не указан");
@@ -108,7 +108,7 @@ public class IndexModel : PageModel
 
         string url = $"https://api.telegram.org/bot{botToken}/sendMessage";
 
-        // 3. Добавляем кнопки с роутингом только по HTTPS
+        
         var buttons = new List<object>();
         if (cleanPhone.Length >= 7)
         {
