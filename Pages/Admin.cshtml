@@ -55,7 +55,6 @@
                 <td>@item.BookingDate.ToString("dd.MM.yyyy HH:mm")</td>
                 <td>@item.SpecialRequests</td>
                 <td>
-                    <!-- Выпадающий список для быстрой смены статуса -->
                     <form method="post" asp-page-handler="UpdateStatus" class="d-flex gap-1">
                         <input type="hidden" name="id" value="@item.BookingId" />
                         <select name="status" class="form-select form-select-sm" onchange="this.form.submit()">
