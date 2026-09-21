@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Центр медиации и психологической помощи";
 }
-<!-- Главный баннер (Hero) -->
 <section class="py-5 mb-5 rounded-5 bg-white border border-1 shadow-sm text-center" style="min-height: 380px; display: flex; align-items: center;">
     <div class="container py-3">
         <div class="mx-auto" style="max-width: 750px;">
@@ -23,7 +22,6 @@
         </div>
     </div>
 </section>
-<!-- Блок "О специалисте" -->
 <section id="about" class="mb-5">
     <div class="row align-items-center g-4">
         <div class="col-md-5">
@@ -43,8 +41,6 @@
         </div>
     </div>
 </section>
-
-<!-- Карточки услуг (без картинок, с иконками) -->
 <section id="services" class="mb-5">
     <h2 class="text-center fw-bold mb-4">Форматы работы</h2>
     <div class="row g-4">
@@ -87,7 +83,6 @@
     </div>
 </section>
 
-<!-- Форма бронирования -->
 <section id="booking-form" class="py-4">
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
@@ -126,10 +121,10 @@
                         <div class="col-md-6">
                             <label class="form-label fw-bold">Время встречи</label>
 
-                            <!-- Скрытое поле для отправки значения на бэкенд -->
+                           
                             <input type="hidden" name="SelectedTime" id="selected-time-input" required />
 
-                            <!-- Контейнер для кликабельных кнопок -->
+                      
                             <div id="time-slots-container" class="d-flex flex-wrap gap-2"></div>
                         </div>
                     </div>
