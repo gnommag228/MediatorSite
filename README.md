@@ -1,21 +1,41 @@
-# Mediator Landing Page (ASP.NET Core)
+# MediatorSite 
 
-A professional landing page for mediation services featuring online booking and real-time Telegram notifications.
+A full-stack web application built with **C#** and **ASP.NET Core** (Razor Pages) designed for managing client booking services, appointment slots, and automated notifications.
 
-## Tech Stack
-* **Framework:** ASP.NET Core Razor Pages (.NET 8)
-* **Database:** Entity Framework Core / SQLite
+---
+
+###  Features
+
+* **Calendar & Slot Reservation:** Interactive slot booking logic with automated validation to prevent double-booking.
+* **Telegram Bot Integration:** Instant real-time notifications via the Telegram Bot API sent directly to the site administrator upon new booking requests.
+* **Admin Portal:** Secured administrative area with authentication for managing incoming requests, reviewing client bookings, and updating schedule slots.
+* **CI/CD & Deployment:** Configured for automated continuous deployment to Render directly from GitHub using environment variables for sensitive configuration management.
+
+---
+
+###  Tech Stack & Architecture
+
+* **Framework:** .NET 8 / ASP.NET Core (Razor Pages, Web API)
+* **ORM & Database:** Entity Framework Core with SQLite (database migrations enabled)
 * **Integrations:** Telegram Bot API
-* **Frontend:** HTML5, CSS3, Bootstrap
+* **Security:** Authentication & Authorization for admin routes, environment variables for secrets
+* **Deployment:** Render (Hosting & CD)
 
-## Key Features
-* Client booking form for consultation requests.
-* Instant Telegram notifications sent to the administrator upon submission.
-* Protected admin panel for managing booking requests.
-* Secure configuration architecture with externalized secrets (`.gitignore` applied).
+---
 
+###  Project Structure
 
-https://yulia-mediator.onrender.com/
+* **`Pages/`** — Razor Pages (UI & Page Models)
+  * **`Admin/`** — Admin panel & booking management
+  * **`Shared/`** — Layouts & partial views
+* **`Models/`** — Data entities & EF Core models
+* **`Services/`** — Business logic (Telegram API, Booking validation)
+* **`Data/`** — DbContext and EF Core Migrations
+* **`appsettings.json`** — Configuration file
+
+  
+
+  ## https://yulia-mediator.onrender.com/
 
 <img width="1882" height="949" alt="image" src="https://github.com/user-attachments/assets/32a1588c-61a2-4cde-9c2c-f274fe6d6138" />
 
