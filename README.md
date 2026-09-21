@@ -2,30 +2,20 @@
 
 A professional landing page for mediation services featuring online booking and real-time Telegram notifications.
 
-## 🚀 Tech Stack
+## Tech Stack
 * **Framework:** ASP.NET Core Razor Pages (.NET 8)
 * **Database:** Entity Framework Core / SQLite
 * **Integrations:** Telegram Bot API
 * **Frontend:** HTML5, CSS3, Bootstrap
 
-## ✨ Key Features
+## Key Features
 * Client booking form for consultation requests.
 * Instant Telegram notifications sent to the administrator upon submission.
 * Protected admin panel for managing booking requests.
 * Secure configuration architecture with externalized secrets (`.gitignore` applied).
 
-## 🛠️ Local Setup
 
-1. Clone the repository:
-   ```bash
-   
-   git clone https://github.com/gnommag228/MediatorSite.git
-
- 2.Rename appsettings.Example.json to appsettings.json.
- 
- 3.Provide your credentials (BotToken, ChatId, Password) in appsettings.json.
- 
- 4.Run the project using Visual Studio or via CLI (dotnet run).
+https://yulia-mediator.onrender.com/
 
 <img width="1882" height="949" alt="image" src="https://github.com/user-attachments/assets/32a1588c-61a2-4cde-9c2c-f274fe6d6138" />
 
