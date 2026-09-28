@@ -14,4 +14,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
   </ItemGroup>
 
+	<ItemGroup>
+		<Compile Remove="MediatorSite.Tests\**" />
+		<Content Remove="MediatorSite.Tests\**" />
+		<None Remove="MediatorSite.Tests\**" />
+	</ItemGroup>
+
 </Project>

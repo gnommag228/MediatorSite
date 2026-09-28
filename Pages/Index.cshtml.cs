@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
+using MediatorSite.Utilities;
 
 namespace MediatorSite.Pages;
 
@@ -95,10 +96,17 @@ public class IndexModel : PageModel
             cleanPhone = "7" + cleanPhone.Substring(1);
         }
 
+<<<<<<< Updated upstream
        
         string name = SanitizeMarkdown(booking.CustomerName);
         string phone = SanitizeMarkdown(booking.Phone);
         string comments = SanitizeMarkdown(booking.SpecialRequests ?? "Не указан");
+=======
+        // 2. Формируем безопасный текст с экранированием Markdown
+        string name = MarkdownSanitizer.Sanitize(booking.CustomerName);
+        string phone = MarkdownSanitizer.Sanitize(booking.Phone);
+        string comments = MarkdownSanitizer.Sanitize(booking.SpecialRequests ?? "Не указан");
+>>>>>>> Stashed changes
 
         string message = $" *Новая запись на консультацию!*\n\n" +
                          $" *Имя:* {name}\n" +
@@ -144,6 +152,7 @@ public class IndexModel : PageModel
         }
     }
 
+<<<<<<< Updated upstream
     private static string SanitizeMarkdown(string? text)
     {
         return (text ?? "")
@@ -152,3 +161,7 @@ public class IndexModel : PageModel
             .Replace("`", "\\`");
     }
 }
+=======
+      
+}
+>>>>>>> Stashed changes
