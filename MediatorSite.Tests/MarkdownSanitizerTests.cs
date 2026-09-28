@@ -1,4 +1,4 @@
-﻿using MediatorSite.Tests;
+﻿
 using Xunit;
 using MediatorSite.Utilities;
 

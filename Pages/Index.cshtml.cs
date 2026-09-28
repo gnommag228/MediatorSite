@@ -96,17 +96,12 @@ public class IndexModel : PageModel
             cleanPhone = "7" + cleanPhone.Substring(1);
         }
 
-<<<<<<< Updated upstream
-       
-        string name = SanitizeMarkdown(booking.CustomerName);
-        string phone = SanitizeMarkdown(booking.Phone);
-        string comments = SanitizeMarkdown(booking.SpecialRequests ?? "Не указан");
-=======
-        // 2. Формируем безопасный текст с экранированием Markdown
+
+
         string name = MarkdownSanitizer.Sanitize(booking.CustomerName);
         string phone = MarkdownSanitizer.Sanitize(booking.Phone);
         string comments = MarkdownSanitizer.Sanitize(booking.SpecialRequests ?? "Не указан");
->>>>>>> Stashed changes
+
 
         string message = $" *Новая запись на консультацию!*\n\n" +
                          $" *Имя:* {name}\n" +
@@ -151,17 +146,4 @@ public class IndexModel : PageModel
             _logger.LogError(ex, "Ошибка при отправке запроса к Telegram API.");
         }
     }
-
-<<<<<<< Updated upstream
-    private static string SanitizeMarkdown(string? text)
-    {
-        return (text ?? "")
-            .Replace("*", "\\*")
-            .Replace("_", "\\_")
-            .Replace("`", "\\`");
-    }
 }
-=======
-      
-}
->>>>>>> Stashed changes
