@@ -96,8 +96,6 @@ public class IndexModel : PageModel
             cleanPhone = "7" + cleanPhone.Substring(1);
         }
 
-
-
         string name = MarkdownSanitizer.Sanitize(booking.CustomerName);
         string phone = MarkdownSanitizer.Sanitize(booking.Phone);
         string comments = MarkdownSanitizer.Sanitize(booking.SpecialRequests ?? "Не указан");
