@@ -2,7 +2,7 @@
 using Xunit;
 using MediatorSite.Utilities;
 
-namespace MediatorSite.Tests;
+
 
 public class MarkdownSanitizerTests
 {
