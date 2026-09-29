@@ -11,22 +11,21 @@ public class MarkdownSanitizerTests
     {
         string input = "test*";
         string result = MarkdownSanitizer.Sanitize(input);
-        Assert.Equal("test\\**", result);
+        Assert.Equal("test\\*", result);
     }
     [Fact]
     public void Sanitize_EscapesUnderscore()
     {
         string input = "test_";
         string result = MarkdownSanitizer.Sanitize(input);
-        Assert.Equal("test\\__", result);
+        Assert.Equal("test\\_", result);
     }
     [Fact]
     public void Sanitize_EscapesBacktick()
     {
         string input = "test`";
         string result = MarkdownSanitizer.Sanitize(input);
-        Assert.Equal("test\\`*", result);
-        Assert.Equal("test\\`*", result);
+        Assert.Equal("test\\`", result);
     }
 
 
