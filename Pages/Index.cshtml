@@ -74,7 +74,7 @@
 <section id="about" class="mb-5 p-4 p-md-5 rounded-5 bg-beige-block">
     <div class="row align-items-center g-4">
         <div class="col-md-5">
-            <img src="/images/specialist.jpg" alt="Медиатор Юлия" class="img-fluid rounded-4 shadow object-fit-cover" style="max-height: 650px; width: 100%;">
+            <img src="/images/specialist2.jpg" alt="Медиатор Юлия" class="img-fluid rounded-4 shadow object-fit-cover" style="max-height: 650px; width: 100%;">
         </div>
         <div class="col-md-7">
             <h2 class="fw-bold mb-3">Ваш медиатор — Юлия Владимировна</h2>
@@ -152,6 +152,11 @@
             <div class="col-md-6"><i class="bi bi-check-circle-fill text-success me-2"></i>Договорённости, которые вы сможете исполнить</div>
         </div>
 
+        <p class="text-muted small mb-3">
+            <i class="bi bi-info-circle text-primary me-1"></i>
+            При заполнении заявки укажите интересующую вас тему тренинга в поле комментария.
+        </p>
+
         <a href="#booking-form" class="btn btn-primary btn-lg rounded-pill px-4 py-3 fw-bold">
             Обсудить мой случай →
         </a>
@@ -171,13 +176,34 @@
 
         <hr class="my-4 opacity-10">
 
-        <h5 class="fw-bold mb-3">Темы тренингов:</h5>
-        <div class="row g-3 mb-4">
-            <div class="col-md-6"><i class="bi bi-dot text-primary fs-4 me-1"></i>Как разговаривать с подростком, когда он вас не слышит</div>
-            <div class="col-md-6"><i class="bi bi-dot text-primary fs-4 me-1"></i>Как распознавать манипуляции и противостоять им</div>
-            <div class="col-md-6"><i class="bi bi-dot text-primary fs-4 me-1"></i>Как вести переговоры и не срываться в крик</div>
-            <div class="col-md-6"><i class="bi bi-dot text-primary fs-4 me-1"></i>Основы медиации для жизни, учебы и работы</div>
+        <!-- Выделенный контрастный блок под темы -->
+        <div class="bg-light p-4 rounded-4 mb-4 border border-light-subtle">
+            <h5 class="fw-bold mb-3">Темы тренингов:</h5>
+            <div class="row g-3">
+                <div class="col-md-6 d-flex align-items-center">
+                    <i class="bi bi-dot text-primary fs-3 me-1"></i>
+                    <span>Как разговаривать с подростком, когда он вас не слышит</span>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <i class="bi bi-dot text-primary fs-3 me-1"></i>
+                    <span>Как распознавать манипуляции и противостоять им</span>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <i class="bi bi-dot text-primary fs-3 me-1"></i>
+                    <span>Как вести переговоры и не срываться в крик</span>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <i class="bi bi-dot text-primary fs-3 me-1"></i>
+                    <span>Основы медиации для жизни, учебы и работы</span>
+                </div>
+            </div>
         </div>
+
+        <!-- Аккуратный текст-подсказка вместо белой полосы -->
+        <p class="text-muted small mb-3">
+            <i class="bi bi-info-circle text-primary me-1"></i>
+            При заполнении заявки укажите интересующую вас тему тренинга в поле комментария.
+        </p>
 
         <div>
             <a href="#booking-form" class="btn btn-outline-primary btn-lg rounded-pill px-4">
@@ -254,8 +280,7 @@
     <h2 class="text-center fw-bold mb-4">Часто задаваемые вопросы</h2>
     <div class="accordion shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
 
-
-
+        <!-- FAQ 1 -->
         <div class="accordion-item border-0">
             <h2 class="accordion-header">
                 <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
@@ -264,55 +289,80 @@
             </h2>
             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                 <div class="accordion-body text-muted">
-                    На первой сессии мы формулируем ваш запрос, обсуждаем ожидаемые результаты и составляем комфортный план дальнейшей работы.
+                    Первая встреча — это конфликтологическое консультирование. Вы рассказываете свою ситуацию, я помогаю определить дальнейшие шаги. Если необходимо, я связываюсь со второй стороной и приглашаю к диалогу. Также на первой встрече я рассказываю, что такое медиация, как она проходит и что такое медиативное соглашение.
                 </div>
             </div>
         </div>
+
+        <!-- FAQ 2 -->
         <div class="accordion-item border-0 border-top">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                    Эффективна ли онлайн-консультация так же, как личная встреча?
+                    А это вообще законно? Медиативное соглашение имеет силу?
                 </button>
             </h2>
             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body text-muted">
-                    Да, результат сессии не зависит от формата. Главное — находиться в спокойном и безопасном месте, где вас никто не будет отвлекать во время созвона.
+                    Да, медиация — это официальная процедура, закреплённая Федеральным законом № 193-ФЗ «Об альтернативной процедуре урегулирования споров с участием посредника (процедуре медиации)». Медиативное соглашение, удостоверенное нотариусом, имеет силу исполнительного документа. Это значит, что если одна из сторон не выполняет договорённости, их можно принудительно исполнить без обращения в суд.
                 </div>
             </div>
         </div>
+
+        <!-- FAQ 3 -->
         <div class="accordion-item border-0 border-top">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                    Нужно ли как-то специально готовиться к сессии?
+                    А вы не заставите меня мириться, если я не хочу?
                 </button>
             </h2>
             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body text-muted">
-                    Специальная подготовка не требуется. Достаточно сформулировать ключевые темы или вопросы, которые вы хотите обсудить в первую очередь.
+                    Нет. Медиация — это добровольная процедура. Все решения принимаются только по обоюдному согласию сторон. Если вы не хотите сохранять отношения, моя задача — не примирить вас, а помочь цивилизованно урегулировать спор: договориться об условиях развода, разделе имущества или порядке общения с детьми. Вы не обязаны ни мириться, ни сохранять отношения.
                 </div>
             </div>
         </div>
+
+        <!-- FAQ 4 -->
         <div class="accordion-item border-0 border-top">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                    Что делать, если нужно отменить или перенести запись?
+                    Чем это лучше суда? Почему я должен вам платить, а не юристу?
                 </button>
             </h2>
             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body text-muted">
-                    Вы можете перенести или отменить консультацию, предупредив меня в Telegram или WhatsApp не позднее чем за 24 часа до назначенного времени.
+                    Суд — это месяцы ожидания, серьёзные расходы на юристов и публичное разбирательство, где вашу ситуацию обсуждают посторонние люди. И даже выиграв суд, вы можете остаться недовольны — потому что решение принимал судья, а не вы.<br><br>
+                    В медиации всё иначе. Вы не тратите месяцы на суды. Вы не платите за войну. Вы садитесь за стол переговоров и сами договариваетесь о том, как будет лучше для вас. Быстрее. Дешевле. Конфиденциально. И, что самое важное, — без принуждения. Вы не воюете — вы договариваетесь.<br><br>
+                    Юрист будет сражаться за вас против второй стороны. Я помогу вам договориться со второй стороной так, чтобы решение устроило обоих. В медиации решение принимаете вы сами, поэтому оно исполняется добровольно гораздо чаще.
                 </div>
             </div>
         </div>
+
+        <!-- FAQ 5 -->
         <div class="accordion-item border-0 border-top">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                    Гарантируется ли конфиденциальность?
+                    Сколько встреч мне понадобится?
                 </button>
             </h2>
             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body text-muted">
-                    Абсолютно. Вся информация, озвученная на консультациях или медиациях, строго конфиденциальна и не передается третьим лицам.
+                    Это зависит от сложности вашей ситуации. Чаще всего достаточно одной консультации, чтобы разобраться в сути спора и понять, что делать дальше. Если вы решите перейти к совместной медиации, обычно требуется 1–3 встречи по 120 минут.<br><br>
+                    Медиация не растягивается на месяцы. Каждая новая встреча — это расходы, поэтому клиенты сами стараются договориться как можно быстрее. А я помогаю сделать это без лишних встреч и проволочек.
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="accordion-item border-0 border-top">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                    Гарантируется ли конфиденциальность?
+                </button>
+            </h2>
+            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted">
+                    Да. Вся информация, которая обсуждается на консультации или в ходе медиации, остаётся строго между участниками. Это ключевое отличие от суда, где разбирательство публично. Никакие детали не выходят за пределы кабинета и не передаются третьим лицам. Перед началом процедуры мы подписываем соглашение о конфиденциальности, в котором закрепляется это условие.
                 </div>
             </div>
         </div>
@@ -334,8 +384,8 @@
                     </div>
                     <div>
                         <h6 class="fw-bold mb-1 text-dark">Адрес приема (офлайн)</h6>
-                        <p class="text-muted mb-0">г. Москва, ул. Примерная, д. 10, офис 402</p>
-                        <small class="text-muted">(прием строго по предварительной записи)</small>
+                        <p class="text-muted mb-0">г. Москва, СЗАО</p>
+                        <small class="text-muted">Принимаю у себя, выезжаю к вам или подбираю удобный коворкинг. Место встречи согласовываем после консультации.</small>
                     </div>
                 </div>
 
