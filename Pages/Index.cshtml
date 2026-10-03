@@ -50,10 +50,10 @@
     }
 </style>
 
-<section class="py-5 mb-5 rounded-5 bg-white border border-1 shadow-sm text-center" style="min-height: 380px; display: flex; align-items: center;">
+<section class="py-5 mb-5 rounded-5 bg-white border shadow-sm text-center" style="min-height: 380px; display: flex; align-items: center; border-color: #3B6EA5 !important;">
     <div class="container py-3">
         <div class="mx-auto" style="max-width: 750px;">
-            <span class="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2 rounded-pill fw-medium">
+            <span class="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2 rounded-pill fw-medium" style="color: #3B6EA5 !important; background-color: rgba(59, 110, 165, 0.1) !important;">
                 <i class="bi bi-shield-check me-1"></i> Конфиденциально & Профессионально
             </span>
 
@@ -63,8 +63,8 @@
                 Без суда: медиация помогает договориться о деньгах, детях, имуществе и других спорных вопросах — с участием нейтрального посредника.
             </p>
 
-            <a href="#booking-form" class="btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-sm fw-medium">
-                Обсудить мою ситуацию <i class="bi bi-arrow-right ms-2"></i>
+            <a href="#booking" class="btn btn-primary btn-lg rounded-pill px-5 py-3 shadow-sm fw-medium" style="background-color: #3B6EA5; border-color: #3B6EA5;">
+                Записаться <i class="bi bi-arrow-right ms-2"></i>
             </a>
         </div>
     </div>
@@ -89,42 +89,57 @@
     </div>
 </section>
 
-<section id="services" class="mb-5">
-    <h2 class="text-center fw-bold mb-4">Форматы работы</h2>
-    <div class="row g-4">
-        <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
-                <div class="mb-3 text-primary fs-1">
-                    <i class="bi bi-person-heart"></i>
+<section id="services" class="my-5 py-4">
+    <h2 class="fw-bold mb-4 text-center">Форматы работы</h2>
+
+    <div class="row g-4 justify-content-center align-items-stretch">
+        <!-- Конфликтологическое консультирование -->
+        <div class="col-12 col-md-4">
+            <div class="card border rounded-5 p-4 h-100 bg-white shadow-sm text-center"
+                 style="border-color: #3B6EA5 !important;">
+                <div class="mb-3 mt-2">
+                    <i class="bi bi-person-heart fs-1" style="color: #3B6EA5;"></i>
                 </div>
-                <div class="card-body p-0">
-                    <h5 class="card-title fw-bold mb-2">Конфликтологическое консультирование</h5>
-                    <p class="card-text text-muted small mb-3">Первичная консультация для одного участника. Разбираем ситуацию, определяем суть спора и дальнейшие шаги. При необходимости связываюсь со второй стороной и приглашаю к диалогу.</p>
-                    <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">60 минут · онлайн или лично</span>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
-                <div class="mb-3 text-primary fs-1">
-                    <i class="bi bi-people"></i>
-                </div>
-                <div class="card-body p-0">
-                    <h5 class="card-title fw-bold mb-2">Медиация</h5>
-                    <p class="card-text text-muted small mb-3">Совместная встреча. Я, как нейтральный посредник, помогаю перейти от спора к поиску решений.</p>
-                    <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">120 минут · онлайн или лично</span>
+                <h5 class="fw-bold mb-3">Конфликтологическое консультирование</h5>
+                <p class="text-muted small mb-4">
+                    Первичная консультация для одного участника. Разбираем ситуацию, определяем суть спора и дальнейшие шаги. При необходимости связываюсь со второй стороной и приглашаю к диалогу.
+                </p>
+                <div class="mt-auto">
+                    <span class="badge rounded-pill bg-light text-dark fw-normal px-3 py-2 border">60 минут · онлайн или лично</span>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm rounded-4 p-4 text-center">
-                <div class="mb-3 text-primary fs-1">
-                    <i class="bi bi-laptop"></i>
+
+        <!-- Медиация -->
+        <div class="col-12 col-md-4">
+            <div class="card border rounded-5 p-4 h-100 bg-white shadow-sm text-center"
+                 style="border-color: #3B6EA5 !important;">
+                <div class="mb-3 mt-2">
+                    <i class="bi bi-people fs-1" style="color: #3B6EA5;"></i>
                 </div>
-                <div class="card-body p-0">
-                    <h5 class="card-title fw-bold mb-2">Онлайн-формат</h5>
-                    <p class="card-text text-muted small mb-3">Консультация или медиация — удаленно. Удобно, если вы в другом городе или предпочитаете онлайн. Zoom, Telegram, WhatsApp.</p>
-                    <span class="badge bg-light text-dark border px-3 py-2 rounded-pill">60–120 минут</span>
+                <h5 class="fw-bold mb-3">Медиация</h5>
+                <p class="text-muted small mb-4">
+                    Совместная встреча. Я, как нейтральный посредник, помогаю перейти от спора к поиску решений.
+                </p>
+                <div class="mt-auto">
+                    <span class="badge rounded-pill bg-light text-dark fw-normal px-3 py-2 border">120 минут · онлайн или лично</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Онлайн-формат -->
+        <div class="col-12 col-md-4">
+            <div class="card border rounded-5 p-4 h-100 bg-white shadow-sm text-center"
+                 style="border-color: #3B6EA5 !important;">
+                <div class="mb-3 mt-2">
+                    <i class="bi bi-laptop fs-1" style="color: #3B6EA5;"></i>
+                </div>
+                <h5 class="fw-bold mb-3">Онлайн-формат</h5>
+                <p class="text-muted small mb-4">
+                    Консультация или медиация — удаленно. Удобно, если вы в другом городе или предпочитаете онлайн. Zoom, Telegram, WhatsApp.
+                </p>
+                <div class="mt-auto">
+                    <span class="badge rounded-pill bg-light text-dark fw-normal px-3 py-2 border">60–120 минут</span>
                 </div>
             </div>
         </div>
@@ -156,7 +171,7 @@
             При заполнении заявки укажите интересующую вас тему тренинга в поле комментария.
         </p>
 
-        <a href="#booking-form" class="btn btn-primary btn-lg rounded-pill px-4 py-3 fw-bold">
+        <a href="#booking" class="btn btn-primary btn-lg rounded-pill px-4 py-3 fw-bold">
             Обсудить мой случай →
         </a>
     </div>
@@ -164,9 +179,9 @@
 
 
 <section id="education" class="mb-5 py-4">
-    <div class="card border-0 shadow-sm rounded-5 p-4 p-md-5 bg-white">
+    <div class="card border shadow-sm rounded-5 p-4 p-md-5 bg-white" style="border-color: #3B6EA5 !important;">
         <div class="d-flex align-items-center gap-3 mb-2">
-            <i class="bi bi-journal-bookmark text-primary display-5"></i>
+            <i class="bi bi-journal-bookmark display-5" style="color: #3B6EA5;"></i>
             <div>
                 <h2 class="fw-bold mb-1">Обучение искусству диалога</h2>
                 <p class="text-muted mb-0">Провожу тренинги и мастер-классы по медиации, переговорам и разрешению конфликтов. Для студентов, школьников, родителей и любых организованных групп.</p>
@@ -175,36 +190,30 @@
 
         <hr class="my-4 opacity-10">
 
-
         <div class="bg-light p-4 rounded-4 mb-4 border border-light-subtle">
             <h5 class="fw-bold mb-3">Темы тренингов:</h5>
             <div class="row g-3">
                 <div class="col-md-6 d-flex align-items-center">
-                    <i class="bi bi-dot text-primary fs-3 me-1"></i>
+                    <i class="bi bi-dot fs-3 me-1" style="color: #3B6EA5;"></i>
                     <span>Как разговаривать с подростком, когда он вас не слышит</span>
                 </div>
                 <div class="col-md-6 d-flex align-items-center">
-                    <i class="bi bi-dot text-primary fs-3 me-1"></i>
+                    <i class="bi bi-dot fs-3 me-1" style="color: #3B6EA5;"></i>
                     <span>Как распознавать манипуляции и противостоять им</span>
                 </div>
                 <div class="col-md-6 d-flex align-items-center">
-                    <i class="bi bi-dot text-primary fs-3 me-1"></i>
+                    <i class="bi bi-dot fs-3 me-1" style="color: #3B6EA5;"></i>
                     <span>Как вести переговоры и не срываться в крик</span>
                 </div>
                 <div class="col-md-6 d-flex align-items-center">
-                    <i class="bi bi-dot text-primary fs-3 me-1"></i>
+                    <i class="bi bi-dot fs-3 me-1" style="color: #3B6EA5;"></i>
                     <span>Основы медиации для жизни, учебы и работы</span>
                 </div>
             </div>
         </div>
 
-        <p class="text-muted small mb-3">
-            <i class="bi bi-info-circle text-primary me-1"></i>
-            При заполнении заявки укажите интересующую вас тему тренинга в поле комментария.
-        </p>
-
         <div>
-            <a href="#booking-form" class="btn btn-outline-primary btn-lg rounded-pill px-4">
+            <a href="#booking" class="btn btn-outline-primary btn-lg rounded-pill px-4" style="color: #3B6EA5; border-color: #3B6EA5;">
                 Заказать проведение тренинга
             </a>
         </div>
@@ -302,7 +311,7 @@
 
 <section id="faq" class="mt-5 mb-4">
     <h2 class="text-center fw-bold mb-4">Часто задаваемые вопросы</h2>
-    <div class="accordion shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
+    <div class="accordion border shadow-sm rounded-4 overflow-hidden" id="faqAccordion" style="border-color: #3B6EA5 !important;">
 
         <!-- FAQ 1 -->
         <div class="accordion-item border-0">
@@ -398,49 +407,59 @@
     <div class="card border-0 shadow-sm rounded-5 p-4 p-md-5" style="background-color: #F5F0E8;">
         <h2 class="fw-bold mb-4 text-center">Контакты</h2>
 
-        <div class="row g-4 text-start">
+        <div class="row g-4 justify-content-center align-items-stretch">
             <!-- Адрес -->
             <div class="col-12 col-md-4">
-                <div class="d-flex align-items-start gap-3">
-                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
-                         style="width: 48px; height: 48px; background-color: #3B6EA5;">
-                        <i class="bi bi-geo-alt-fill text-white fs-5"></i>
-                    </div>
-                    <div>
-                        <h6 class="fw-bold mb-1">Адрес приема (офлайн)</h6>
-                        <p class="mb-1 text-dark fw-medium">г. Москва, СЗАО</p>
-                        <small class="text-muted">Принимаю у себя, выезжаю к вам или подбираю удобный коворкинг. Место встречи согласовываем после консультации.</small>
+                <div class="card border border-light-subtle rounded-4 p-4 h-100 bg-white shadow-sm">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                             style="width: 48px; height: 48px; background-color: #3B6EA5;">
+                            <i class="bi bi-geo-alt-fill text-white fs-5"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Адрес приема (офлайн)</h6>
+                            <p class="mb-1 text-dark fw-medium">г. Москва, СЗАО</p>
+                            <small class="text-muted d-block">Принимаю у себя, выезжаю к вам или подбираю удобный коворкинг. Место встречи согласовываем после консультации.</small>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Телефон -->
             <div class="col-12 col-md-4">
-                <div class="d-flex align-items-start gap-3">
-                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
-                         style="width: 48px; height: 48px; background-color: #3B6EA5;">
-                        <i class="bi bi-telephone-fill text-white fs-5"></i>
-                    </div>
-                    <div>
-                        <h6 class="fw-bold mb-1">Телефон</h6>
-                        <p class="mb-0 fs-5 fw-bold" style="color: #3B6EA5;">
-                            <a href="tel:+79028156175" class="text-decoration-none" style="color: inherit;">+7 (902) 815-61-75</a>
-                        </p>
+                <div class="card border border-light-subtle rounded-4 p-4 h-100 bg-white shadow-sm">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                             style="width: 48px; height: 48px; background-color: #3B6EA5;">
+                            <i class="bi bi-telephone-fill text-white fs-5"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Телефон</h6>
+                            <p class="mb-0 fs-5 fw-bold" style="color: #3B6EA5;">
+                                <a href="tel:+79028156175" class="text-decoration-none" style="color: inherit;">+7 (902) 815-61-75</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Режим работы -->
+            <!-- Telegram-канал -->
             <div class="col-12 col-md-4">
-                <div class="d-flex align-items-start gap-3">
-                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
-                         style="width: 48px; height: 48px; background-color: #3B6EA5;">
-                        <i class="bi bi-clock-fill text-white fs-5"></i>
-                    </div>
-                    <div>
-                        <h6 class="fw-bold mb-1">Режим работы</h6>
-                        <p class="mb-1 text-dark">Пн — Сб: 09:00 — 19:00</p>
-                        <small class="text-muted">Вс: Выходной</small>
+                <div class="card border border-light-subtle rounded-4 p-4 h-100 bg-white shadow-sm">
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                             style="width: 48px; height: 48px; background-color: #24A1DE;">
+                            <i class="bi bi-telegram text-white fs-5"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Telegram-канал</h6>
+                            <p class="mb-1 fw-medium">
+                                <a href="https://t.me/mediatornikiforovayuliya" target="_blank" class="text-decoration-none fw-bold" style="color: #3B6EA5;">
+                                    Читать канал
+                                </a>
+                            </p>
+                            <small class="text-muted d-block">Разборы и статьи о медиации</small>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -451,28 +470,28 @@
 
 
 
-            <!--  <div class="col-md-6">
-        <div class="p-4 rounded-4 text-center border border-primary border-opacity-10" style="background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);">
-            <h5 class="fw-bold text-dark mb-3">Быстрая связь в мессенджерах</h5>
-            <p class="text-muted small mb-4">Предпочитаете текстовые сообщения? Напишите мне прямо в чат — отвечу в течение 15 минут.</p>
+<!--  <div class="col-md-6">
+    <div class="p-4 rounded-4 text-center border border-primary border-opacity-10" style="background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);">
+        <h5 class="fw-bold text-dark mb-3">Быстрая связь в мессенджерах</h5>
+        <p class="text-muted small mb-4">Предпочитаете текстовые сообщения? Напишите мне прямо в чат — отвечу в течение 15 минут.</p>
 
-            <div class="d-grid gap-2">
-                <a href="https://t.me/Yuliya_Nikiforova" target="_blank" class="btn btn-primary btn-lg rounded-pill fw-medium shadow-sm">
-                    <i class="bi bi-telegram me-2"></i> Написать в Telegram
-                </a>
-                <a href="https://wa.me/79028156175" target="_blank" class="btn btn-success btn-lg rounded-pill fw-medium shadow-sm">
-                    <i class="bi bi-whatsapp me-2"></i> Написать в WhatsApp
-                </a>
-            </div>
+        <div class="d-grid gap-2">
+            <a href="https://t.me/Yuliya_Nikiforova" target="_blank" class="btn btn-primary btn-lg rounded-pill fw-medium shadow-sm">
+                <i class="bi bi-telegram me-2"></i> Написать в Telegram
+            </a>
+            <a href="https://wa.me/79028156175" target="_blank" class="btn btn-success btn-lg rounded-pill fw-medium shadow-sm">
+                <i class="bi bi-whatsapp me-2"></i> Написать в WhatsApp
+            </a>
         </div>
-    </div> -->
-        
+    </div>
+</div> -->
 
-    @section Scripts {
-        <partial name="_ValidationScriptsPartial" />
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-        <script>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
 
             const takenSlots = JSON.parse('@Html.Raw(ViewData["TakenSlots"] ?? "[]")');
             const timeSlots = ["09:00", "10:30", "12:00", "14:00", "15:30", "17:00", "18:30"];
@@ -595,5 +614,5 @@
                     });
                 }
             });
-        </script>
-    }
+    </script>
+}
