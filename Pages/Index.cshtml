@@ -10,12 +10,11 @@
         --bg-beige: #F5F0E8;
     }
 
-    /* Настройка шрифтов */
+
     h1, h2, h3, h4, .font-heading {
         font-family: 'Manrope', 'Golos Text', system-ui, -apple-system, sans-serif !important;
     }
 
-    /* Переопределение цветов Bootstrap на фирменные */
     .btn-primary, .bg-primary {
         background-color: var(--primary-blue) !important;
         border-color: var(--primary-blue) !important;
@@ -35,7 +34,7 @@
             color: #fff !important;
         }
 
-    /* Мягкие тени для кнопок */
+
     .btn-primary {
         box-shadow: 0 4px 12px rgba(59, 110, 165, 0.25) !important;
         transition: all 0.2s ease-in-out;
@@ -132,7 +131,7 @@
     </div>
 </section>
 
-<!-- 4. Экологичный развод (Новый флагманский блок, Бежевый фон #F5F0E8) -->
+
 <section id="divorce" class="mb-5 p-4 p-md-5 rounded-5 bg-beige-block shadow-sm">
     <div class="max-w-4xl mx-auto">
         <div class="d-flex align-items-center gap-3 mb-3">
@@ -163,7 +162,7 @@
     </div>
 </section>
 
-<!-- 5. Обучение (Новый блок, Белый фон) -->
+
 <section id="education" class="mb-5 py-4">
     <div class="card border-0 shadow-sm rounded-5 p-4 p-md-5 bg-white">
         <div class="d-flex align-items-center gap-3 mb-2">
@@ -176,7 +175,7 @@
 
         <hr class="my-4 opacity-10">
 
-        <!-- Выделенный контрастный блок под темы -->
+
         <div class="bg-light p-4 rounded-4 mb-4 border border-light-subtle">
             <h5 class="fw-bold mb-3">Темы тренингов:</h5>
             <div class="row g-3">
@@ -199,7 +198,6 @@
             </div>
         </div>
 
-        <!-- Аккуратный текст-подсказка вместо белой полосы -->
         <p class="text-muted small mb-3">
             <i class="bi bi-info-circle text-primary me-1"></i>
             При заполнении заявки укажите интересующую вас тему тренинга в поле комментария.
@@ -213,7 +211,7 @@
     </div>
 </section>
 
-<!-- 7. Форма записи (Белый фон) -->
+<!--
 <section id="booking-form" class="py-4 mb-5">
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
@@ -259,19 +257,45 @@
                         <textarea asp-for="Booking.SpecialRequests" class="form-control" rows="3" placeholder="Кратко опишите суть вашего вопроса..."></textarea>
                     </div>
 
-                    <!-- Обязательное согласие 152-ФЗ -->
-                    <div class="form-check mb-4">
-                        <input class="form-check-input" type="checkbox" id="consentCheck" required checked>
-                        <label class="form-check-label small text-muted" for="consentCheck">
-                            Нажимая кнопку, вы даете согласие на обработку персональных данных в соответствии с <a href="/privacy" target="_blank" class="text-decoration-underline text-muted">Политикой конфиденциальности</a> (ФЗ № 152-ФЗ).
-                        </label>
-                    </div>
 
-                    <button type="submit" id="submit-btn" class="btn btn-primary btn-lg w-100 rounded-3 fw-bold">
-                        Записаться
-                    </button>
+<div class="form-check mb-4">
+    <input class="form-check-input" type="checkbox" id="consentCheck" required checked>
+    <label class="form-check-label small text-muted" for="consentCheck">
+        Нажимая кнопку, вы даете согласие на обработку персональных данных в соответствии с <a href="/privacy" target="_blank" class="text-decoration-underline text-muted">Политикой конфиденциальности</a> (ФЗ № 152-ФЗ).
+    </label>
+</div>
+
+<button type="submit" id="submit-btn" class="btn btn-primary btn-lg w-100 rounded-3 fw-bold">
+    Записаться
+</button>
                 </form>
             </div>
+        </div>
+    </div>
+</section>-->
+
+<section id="booking" class="my-5 py-4">
+    <div class="card border-0 shadow-sm rounded-5 p-4 p-md-5 text-center" style="background-color: #F5F0E8;">
+        <h2 class="fw-bold mb-3" style="color: #3B6EA5;">Записаться на консультацию</h2>
+        <p class="text-muted mb-4 mx-auto" style="max-width: 600px;">
+            Выберите удобный мессенджер, чтобы написать мне напрямую. Я отвечу на все вопросы и мы подберем удобное время для встречи.
+        </p>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 my-2">
+            <!-- Telegram -->
+            <a href="https://t.me/Yuliya_Nikiforova" target="_blank" class="btn btn-lg rounded-pill px-4 py-3 text-white fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2" style="background-color: #24A1DE;">
+                <i class="bi bi-telegram fs-4"></i> Написать в Telegram
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/79028156175" target="_blank" class="btn btn-lg rounded-pill px-4 py-3 text-white fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2" style="background-color: #25D366;">
+                <i class="bi bi-whatsapp fs-4"></i> Написать в WhatsApp
+            </a>
+
+            <!-- MAX -->
+            <a href="https://max.ru/u/f9LHodD0cOIaOcIgSWTVOPI45LIgLm9zfAvJGqgv_sq9eAyVrCIsQSdl7NE" target="_blank" class="btn btn-lg rounded-pill px-4 py-3 text-white fw-bold shadow-sm d-flex align-items-center justify-content-center gap-2" style="background-color: #3B6EA5;">
+                <i class="bi bi-chat-dots-fill fs-4"></i> Связаться через MAX
+            </a>
         </div>
     </div>
 </section>
@@ -370,62 +394,53 @@
     </div>
 </section>
 
+<section id="contacts" class="my-5 py-4">
+    <div class="card border-0 shadow-sm rounded-5 p-4 p-md-5" style="background-color: #F5F0E8;">
+        <h2 class="fw-bold mb-4 text-center">Контакты</h2>
 
-<section id="contacts" class="mb-5">
-    <div class="card border border-primary border-opacity-10 shadow-sm rounded-5 p-4 p-md-5 bg-white">
-        <h2 class="fw-bold text-center text-dark mb-4">Контакты</h2>
-        <div class="row g-4 align-items-center">
-
-
-            <div class="col-md-6">
-                <div class="d-flex align-items-start mb-4">
-                    <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px; min-width: 48px;">
-                        <i class="bi bi-geo-alt fs-5"></i>
+        <div class="row g-4 text-start">
+            <!-- Адрес -->
+            <div class="col-12 col-md-4">
+                <div class="d-flex align-items-start gap-3">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                         style="width: 48px; height: 48px; background-color: #3B6EA5;">
+                        <i class="bi bi-geo-alt-fill text-white fs-5"></i>
                     </div>
                     <div>
-                        <h6 class="fw-bold mb-1 text-dark">Адрес приема (офлайн)</h6>
-                        <p class="text-muted mb-0">г. Москва, СЗАО</p>
+                        <h6 class="fw-bold mb-1">Адрес приема (офлайн)</h6>
+                        <p class="mb-1 text-dark fw-medium">г. Москва, СЗАО</p>
                         <small class="text-muted">Принимаю у себя, выезжаю к вам или подбираю удобный коворкинг. Место встречи согласовываем после консультации.</small>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-start mb-4">
-                    <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px; min-width: 48px;">
-                        <i class="bi bi-telephone fs-5"></i>
-                    </div>
-                    <div>
-                        <h6 class="fw-bold mb-1 text-dark">Телефон</h6>
-                        <p class="mb-0">
-                            <a href="tel:+79028156175" class="text-decoration-none text-dark fw-semibold">+7 (902) 815-61-75</a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-start">
-                    <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px; min-width: 48px;">
-                        <i class="bi bi-clock fs-5"></i>
-                    </div>
-                    <div>
-                        <h6 class="fw-bold mb-1 text-dark">Режим работы</h6>
-                        <p class="text-muted mb-0">Пн — Сб: 09:00 – 19:00</p>
-                        <p class="text-muted mb-0">Вс: Выходной</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Телефон -->
+            <div class="col-12 col-md-4">
+                <div class="d-flex align-items-start gap-3">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                         style="width: 48px; height: 48px; background-color: #3B6EA5;">
+                        <i class="bi bi-telephone-fill text-white fs-5"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1">Телефон</h6>
+                        <p class="mb-0 fs-5 fw-bold" style="color: #3B6EA5;">
+                            <a href="tel:+79028156175" class="text-decoration-none" style="color: inherit;">+7 (902) 815-61-75</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-            <div class="col-md-6">
-                <div class="p-4 rounded-4 text-center border border-primary border-opacity-10" style="background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);">
-                    <h5 class="fw-bold text-dark mb-3">Быстрая связь в мессенджерах</h5>
-                    <p class="text-muted small mb-4">Предпочитаете текстовые сообщения? Напишите мне прямо в чат — отвечу в течение 15 минут.</p>
-
-                    <div class="d-grid gap-2">
-                        <a href="https://t.me/Yuliya_Nikiforova" target="_blank" class="btn btn-primary btn-lg rounded-pill fw-medium shadow-sm">
-                            <i class="bi bi-telegram me-2"></i> Написать в Telegram
-                        </a>
-                        <a href="https://wa.me/79028156175" target="_blank" class="btn btn-success btn-lg rounded-pill fw-medium shadow-sm">
-                            <i class="bi bi-whatsapp me-2"></i> Написать в WhatsApp
-                        </a>
+            <!-- Режим работы -->
+            <div class="col-12 col-md-4">
+                <div class="d-flex align-items-start gap-3">
+                    <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                         style="width: 48px; height: 48px; background-color: #3B6EA5;">
+                        <i class="bi bi-clock-fill text-white fs-5"></i>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold mb-1">Режим работы</h6>
+                        <p class="mb-1 text-dark">Пн — Сб: 09:00 — 19:00</p>
+                        <small class="text-muted">Вс: Выходной</small>
                     </div>
                 </div>
             </div>
@@ -433,132 +448,152 @@
     </div>
 </section>
 
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script>
-
-        const takenSlots = JSON.parse('@Html.Raw(ViewData["TakenSlots"] ?? "[]")');
-        const timeSlots = ["09:00", "10:30", "12:00", "14:00", "15:30", "17:00", "18:30"];
-
-        document.addEventListener("DOMContentLoaded", function () {
 
 
-            @if (TempData["SuccessMessage"] != null)
-            {
-                <text>
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Успешно!',
-                    text: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(TempData["SuccessMessage"])),
-                    toast: true,
-                    position: 'top-end',
-                    showConfirmButton: false,
-                    timer: 4000,
-                    timerProgressBar: true
-                });
-                </text>
-            }
+
+            <!--  <div class="col-md-6">
+        <div class="p-4 rounded-4 text-center border border-primary border-opacity-10" style="background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);">
+            <h5 class="fw-bold text-dark mb-3">Быстрая связь в мессенджерах</h5>
+            <p class="text-muted small mb-4">Предпочитаете текстовые сообщения? Напишите мне прямо в чат — отвечу в течение 15 минут.</p>
+
+            <div class="d-grid gap-2">
+                <a href="https://t.me/Yuliya_Nikiforova" target="_blank" class="btn btn-primary btn-lg rounded-pill fw-medium shadow-sm">
+                    <i class="bi bi-telegram me-2"></i> Написать в Telegram
+                </a>
+                <a href="https://wa.me/79028156175" target="_blank" class="btn btn-success btn-lg rounded-pill fw-medium shadow-sm">
+                    <i class="bi bi-whatsapp me-2"></i> Написать в WhatsApp
+                </a>
+            </div>
+        </div>
+    </div> -->
+        
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script>
+
+            const takenSlots = JSON.parse('@Html.Raw(ViewData["TakenSlots"] ?? "[]")');
+            const timeSlots = ["09:00", "10:30", "12:00", "14:00", "15:30", "17:00", "18:30"];
+
+            document.addEventListener("DOMContentLoaded", function () {
 
 
-            function renderTimeSlots() {
-                const container = document.getElementById('time-slots-container');
-                const dateInput = document.querySelector('input[name="SelectedDate"]');
-                const hiddenTimeInput = document.getElementById('selected-time-input');
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <text>
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Успешно!',
+                        text: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(TempData["SuccessMessage"])),
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 4000,
+                        timerProgressBar: true
+                    });
+                    </text>
+                }
 
-                if (!container || !dateInput) return;
 
-                container.innerHTML = '';
-                const selectedDate = dateInput.value;
+                function renderTimeSlots() {
+                    const container = document.getElementById('time-slots-container');
+                    const dateInput = document.querySelector('input[name="SelectedDate"]');
+                    const hiddenTimeInput = document.getElementById('selected-time-input');
 
-                timeSlots.forEach(slot => {
-                    const fullSlot = `${selectedDate} ${slot}`;
-                    const isTaken = takenSlots.includes(fullSlot);
+                    if (!container || !dateInput) return;
 
-                    const btn = document.createElement('button');
-                    btn.type = 'button';
-                    btn.className = isTaken
-                        ? 'btn btn-outline-secondary disabled position-relative px-3 py-2 text-decoration-line-through opacity-50'
-                        : 'btn btn-outline-primary px-3 py-2 fw-medium time-slot-btn';
+                    container.innerHTML = '';
+                    const selectedDate = dateInput.value;
 
-                    btn.innerHTML = isTaken ? `${slot} ` : slot;
-                    btn.disabled = isTaken;
+                    timeSlots.forEach(slot => {
+                        const fullSlot = `${selectedDate} ${slot}`;
+                        const isTaken = takenSlots.includes(fullSlot);
 
-                    if (!isTaken) {
-                        if (hiddenTimeInput.value === slot) {
-                            btn.classList.replace('btn-outline-primary', 'btn-primary');
+                        const btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.className = isTaken
+                            ? 'btn btn-outline-secondary disabled position-relative px-3 py-2 text-decoration-line-through opacity-50'
+                            : 'btn btn-outline-primary px-3 py-2 fw-medium time-slot-btn';
+
+                        btn.innerHTML = isTaken ? `${slot} ` : slot;
+                        btn.disabled = isTaken;
+
+                        if (!isTaken) {
+                            if (hiddenTimeInput.value === slot) {
+                                btn.classList.replace('btn-outline-primary', 'btn-primary');
+                            }
+
+                            btn.addEventListener('click', function () {
+                                document.querySelectorAll('.time-slot-btn').forEach(b => {
+                                    b.classList.replace('btn-primary', 'btn-outline-primary');
+                                });
+                                btn.classList.replace('btn-outline-primary', 'btn-primary');
+                                hiddenTimeInput.value = slot;
+                            });
                         }
 
-                        btn.addEventListener('click', function () {
-                            document.querySelectorAll('.time-slot-btn').forEach(b => {
-                                b.classList.replace('btn-primary', 'btn-outline-primary');
-                            });
-                            btn.classList.replace('btn-outline-primary', 'btn-primary');
-                            hiddenTimeInput.value = slot;
-                        });
-                    }
+                        container.appendChild(btn);
+                    });
+                }
 
-                    container.appendChild(btn);
-                });
-            }
-
-            const dateInput = document.querySelector('input[name="SelectedDate"]');
-            if (dateInput) {
-                dateInput.addEventListener('change', () => {
-                    const hiddenTimeInput = document.getElementById('selected-time-input');
-                    if (hiddenTimeInput) hiddenTimeInput.value = '';
-                    renderTimeSlots();
-                });
-            }
+                const dateInput = document.querySelector('input[name="SelectedDate"]');
+                if (dateInput) {
+                    dateInput.addEventListener('change', () => {
+                        const hiddenTimeInput = document.getElementById('selected-time-input');
+                        if (hiddenTimeInput) hiddenTimeInput.value = '';
+                        renderTimeSlots();
+                    });
+                }
 
 
-            renderTimeSlots();
+                renderTimeSlots();
 
 
-            const bookingForm = document.querySelector('form');
-            const submitBtn = document.getElementById('submit-btn');
+                const bookingForm = document.querySelector('form');
+                const submitBtn = document.getElementById('submit-btn');
 
-            if (bookingForm && submitBtn) {
-                bookingForm.addEventListener('submit', function () {
-                    if ($(bookingForm).valid && !$(bookingForm).valid()) return;
+                if (bookingForm && submitBtn) {
+                    bookingForm.addEventListener('submit', function () {
+                        if ($(bookingForm).valid && !$(bookingForm).valid()) return;
 
-                    submitBtn.disabled = true;
-                    submitBtn.innerHTML = `
-                        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                        Отправка заявки...
-                    `;
-                });
-            }
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = `
+                            <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                            Отправка заявки...
+                        `;
+                    });
+                }
 
 
-            const phoneInput = document.getElementById('phone-input');
-            if (phoneInput) {
-                phoneInput.addEventListener('input', function (e) {
-                    let val = e.target.value;
-                    if (!val) return;
+                const phoneInput = document.getElementById('phone-input');
+                if (phoneInput) {
+                    phoneInput.addEventListener('input', function (e) {
+                        let val = e.target.value;
+                        if (!val) return;
 
-                    if (val.startsWith('+') && !val.startsWith('+7')) {
-                        e.target.value = val.replace(/[^\d\+\s\-]/g, '');
-                        return;
-                    }
+                        if (val.startsWith('+') && !val.startsWith('+7')) {
+                            e.target.value = val.replace(/[^\d\+\s\-]/g, '');
+                            return;
+                        }
 
-                    if (val.startsWith('8') || val.startsWith('7') || val.startsWith('+7')) {
-                        let digits = val.replace(/\D/g, '');
-                        if (digits.startsWith('8')) digits = '7' + digits.slice(1);
+                        if (val.startsWith('8') || val.startsWith('7') || val.startsWith('+7')) {
+                            let digits = val.replace(/\D/g, '');
+                            if (digits.startsWith('8')) digits = '7' + digits.slice(1);
 
-                        let formatted = '+7';
-                        if (digits.length > 1) formatted += ' (' + digits.substring(1, 4);
-                        if (digits.length >= 4) formatted += ') ' + digits.substring(4, 7);
-                        if (digits.length >= 7) formatted += '-' + digits.substring(7, 9);
-                        if (digits.length >= 9) formatted += '-' + digits.substring(9, 11);
+                            let formatted = '+7';
+                            if (digits.length > 1) formatted += ' (' + digits.substring(1, 4);
+                            if (digits.length >= 4) formatted += ') ' + digits.substring(4, 7);
+                            if (digits.length >= 7) formatted += '-' + digits.substring(7, 9);
+                            if (digits.length >= 9) formatted += '-' + digits.substring(9, 11);
 
-                        e.target.value = formatted;
-                    } else {
-                        e.target.value = val.replace(/[^\d\+\s\-]/g, '');
-                    }
-                });
-            }
-        });
-    </script>
-}
+                            e.target.value = formatted;
+                        } else {
+                            e.target.value = val.replace(/[^\d\+\s\-]/g, '');
+                        }
+                    });
+                }
+            });
+        </script>
+    }

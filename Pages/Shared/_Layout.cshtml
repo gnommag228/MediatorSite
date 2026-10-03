@@ -12,8 +12,7 @@
 </head>
 <body class="position-relative overflow-x-hidden bg-white">
 
-    <!-- Фоновая геометрия -->
-    <!-- Фоновая геометрия с умеренным размытием -->
+ 
     <div class="position-fixed w-100 h-100 top-0 start-0 pointer-events-none" style="z-index: -1;">
         <div class="position-absolute bg-primary rounded-5 opacity-10"
              style="width: 280px; height: 280px; right: -60px; top: -30px; transform: rotate(15deg); filter: blur(8px);"></div>
@@ -25,7 +24,7 @@
     <header class="sticky-top py-3" style="z-index: 1030;">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-white bg-opacity-75 backdrop-blur rounded-pill shadow-sm px-4">
-                <a class="navbar-brand fw-bold text-primary" href="/">
+                <a class="navbar-brand fw-bold" href="/" style="color: #3B6EA5;">
                     <i class="bi bi-flower1 me-2"></i>Юлия | Медиация
                 </a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -33,12 +32,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto align-items-center gap-2">
-                        <li class="nav-item"><a class="nav-link fw-medium" href="#about">О мне</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="#about">Обо мне</a></li>
                         <li class="nav-item"><a class="nav-link fw-medium" href="#services">Услуги</a></li>
                         <li class="nav-item"><a class="nav-link fw-medium" href="#contacts">Контакты</a></li>
                         <li class="nav-item"><a class="nav-link fw-medium" href="#faq">FAQ</a></li>
                         <li class="nav-item ms-lg-2">
-                            <a class="btn btn-primary rounded-pill px-4 shadow-sm" href="#booking-form">Обсудить</a>
+                            <!-- Ссылка сразу в Мессенджер или на блок контактов -->
+                            <a class="btn text-white rounded-pill px-4 shadow-sm" href="#booking" style="background-color: #3B6EA5; border-color: #3B6EA5;">Связаться</a>
                         </li>
                     </ul>
                 </div>
