@@ -22,6 +22,6 @@ public class Booking
     [StringLength(500, ErrorMessage = "Комментарий не должен превышать 500 символов")]
     public string? SpecialRequests { get; set; }
 
-    // Статус заявки
+    
     public string Status { get; set; } = "Новая";
 }
